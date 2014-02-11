@@ -1,0 +1,97 @@
+@CHARSET "UTF-8";
+
+*
+{
+	margin: 0px;
+	padding: 0px;
+}
+
+.formdate
+{
+	width: 80px;
+}
+
+.banner
+{
+	border: 1px solid grey;
+	max-width: 1024px;
+	text-align: center;
+	border-radius:10px;
+	padding: 10px;
+}
+
+.search
+{
+	border: 1px solid grey;
+	border-radius:10px;
+	display: inline-block;
+	vertical-align: top;
+	max-width: 250px;
+	margin-top: 5px;
+}
+
+.search p
+{
+	margin: auto;
+}
+
+.date
+{
+	float:right
+}
+
+.gras
+{
+	font-weight: bold;
+}
+
+.results
+{
+	margin-left: 5px;
+	display: inline-block;
+	vertical-align: top;
+	max-width: 762px;
+}
+
+.Politician
+{
+	margin-top: 5px;
+	margin-bottom: 5px;
+	border: 1px solid black;
+	border-radius:10px;
+}
+
+.Politician p
+{
+	padding: 4px;
+}
+
+.imgPoliticien
+{
+	max-width: 300px;
+	max-height: 300px;
+	float:left;
+}
+
+input
+{
+	margin: 2px;
+	width: auto;
+}
+
+ul
+{
+	clear: left;
+	margin-left:30px;
+}
+
+.formdate
+{
+	margin-left: 3px;
+}
+
+body
+{
+	margin: auto;
+	max-width: 1024px;
+}
