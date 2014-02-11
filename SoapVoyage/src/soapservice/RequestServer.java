@@ -3,10 +3,11 @@ import java.sql.*;
 
 public class RequestServer {
 	
-	public ResultSet getAllVoyage(){
+	public ArrayList<Pair<String,String>> getAllVoyage(){
 		Connection connect;
 		Statement stat;
 		ResultSet res = null;
+		ArrayList<Pair<String,String>> resFormat = new ArrayList<Pair<String,String>>();
 		
 		try{
 			Class.forName("com.mysql.jdbc.Driver");
@@ -17,10 +18,12 @@ public class RequestServer {
 			System.out.println("Impossible de se connecter à la base de données");
 		}
 		
-		return res;
+		while(res.next()){
+			resFormat.
+		}
 	}
 	
-	public ResultSet getChosenVoyage(String voyage){
+	public ArrayList<Pair<String,String>> getChosenVoyage(String voyage){
 		Connection connect;
 		Statement stat;
 		ResultSet res = null;
