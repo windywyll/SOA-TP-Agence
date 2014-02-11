@@ -1,6 +1,10 @@
 package soapservice;
 import java.sql.*;
 
+import javax.jws.WebParam;
+import javax.jws.WebService;
+
+@WebService(targetNamespace = "http://soapservice/", portName = "RequestServerPort", serviceName = "RequestServerService")
 public class RequestServer {
 	
 	public ResultSet getAllVoyage(){
@@ -20,7 +24,7 @@ public class RequestServer {
 		return res;
 	}
 	
-	public ResultSet getChosenVoyage(String voyage){
+	public ResultSet getChosenVoyage(@WebParam(name = "arg0") String voyage){
 		Connection connect;
 		Statement stat;
 		ResultSet res = null;
