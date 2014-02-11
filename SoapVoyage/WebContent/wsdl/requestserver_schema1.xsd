@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?><xs:schema xmlns:tns="http://soapservice/" xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="unqualified" targetNamespace="http://soapservice/" version="1.0">
+<xs:element name="getChosenVoyage" type="tns:getChosenVoyage"/>
+<xs:element name="getChosenVoyageResponse" type="tns:getChosenVoyageResponse"/>
+<xs:complexType name="getChosenVoyage">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="getChosenVoyageResponse">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="return" type="tns:pair"/>
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="pair">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="first" type="xs:anyType"/>
+      <xs:element minOccurs="0" name="second" type="xs:anyType"/>
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="arrayList">
+    <xs:complexContent>
+      <xs:extension base="tns:abstractList">
+        <xs:sequence/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+<xs:complexType abstract="true" name="abstractList">
+    <xs:complexContent>
+      <xs:extension base="tns:abstractCollection">
+        <xs:sequence/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+<xs:complexType abstract="true" name="abstractCollection">
+    <xs:sequence/>
+  </xs:complexType>
+</xs:schema>
