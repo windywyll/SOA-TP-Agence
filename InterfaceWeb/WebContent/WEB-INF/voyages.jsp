@@ -12,7 +12,7 @@
 		<h1>Recherche de Voyage</h1>
 	</div>
 	<div id="search" class = "search">
-		<form method="post" action="SOATP//voyage">
+		<form method="post" action="voyage">
 			<p><label for="Pays ou Ville" >Nom :</label><input type="text" name="pays" id="pays" /></p>
 		</form>
 	</div>

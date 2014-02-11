@@ -1,6 +1,10 @@
 package soapservice;
 import java.sql.*;
 
+import javax.jws.WebParam;
+import javax.jws.WebService;
+
+@WebService(targetNamespace = "http://soapservice/", portName = "RequestServerPort", serviceName = "RequestServerService")
 public class RequestServer {
 	
 	public ArrayList<Pair<String,String>> getAllVoyage(){
