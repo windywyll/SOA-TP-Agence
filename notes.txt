@@ -8,3 +8,5 @@ Compte rendu :
 	-problèmes rencontrés
 		SOAP : Ne peut pas renvoyer d'interface
 3 Recul/conclusion
+
+schema, montrer ou on a mis nos trucs.

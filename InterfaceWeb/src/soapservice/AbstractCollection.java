@@ -1,23 +1,24 @@
 
-package fr.voyage.soapbdd;
+package soapservice;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlSeeAlso;
 import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Classe Java pour arrayList complex type.
+ * <p>Classe Java pour abstractCollection complex type.
  * 
  * <p>Le fragment de sch\u00e9ma suivant indique le contenu attendu figurant dans cette classe.
  * 
  * <pre>
- * &lt;complexType name="arrayList">
+ * &lt;complexType name="abstractCollection">
  *   &lt;complexContent>
- *     &lt;extension base="{http://soapservice/}abstractList">
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
  *       &lt;/sequence>
- *     &lt;/extension>
+ *     &lt;/restriction>
  *   &lt;/complexContent>
  * &lt;/complexType>
  * </pre>
@@ -25,10 +26,11 @@ import javax.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "arrayList")
-public class ArrayList
-    extends AbstractList
-{
+@XmlType(name = "abstractCollection")
+@XmlSeeAlso({
+    AbstractList.class
+})
+public abstract class AbstractCollection {
 
 
 }

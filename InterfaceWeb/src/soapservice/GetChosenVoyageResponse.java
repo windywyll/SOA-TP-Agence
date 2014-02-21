@@ -1,5 +1,5 @@
 
-package fr.voyage.soapbdd;
+package soapservice;
 
 import java.util.ArrayList;
 import java.util.List;
