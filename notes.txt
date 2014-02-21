@@ -1,0 +1,10 @@
+Compte rendu :
+1 Données
+	- La structure de données de la BDD
+	- Les format messages qui transitent
+	- App Egine
+2 Les services
+	- descriptions
+	-problèmes rencontrés
+		SOAP : Ne peut pas renvoyer d'interface
+3 Recul/conclusion
