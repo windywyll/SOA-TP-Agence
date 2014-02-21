@@ -7,4 +7,5 @@ Compte rendu :
 	- descriptions
 	-problèmes rencontrés
 		SOAP : Ne peut pas renvoyer d'interface
+		SOAP : flickr renvoyais un body null à null au lieu d'une erreur, dur à débugger
 3 Recul/conclusion
