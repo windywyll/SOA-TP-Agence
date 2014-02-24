@@ -37,13 +37,18 @@ public class ApiFlickr
 		}
 	}
 	
-	public TreeSet<String> getPhotosPays(String pays)
+	public TreeSet<String> getPhotosWithTag(String tag)
 	{
 		TreeSet<String> setPhotos = new TreeSet<String>();
 		SOAPMessage message = null;
 		try {
-			message = soapConnexion.call(buildXMLRequest(pays), URL_API);
+			message = soapConnexion.call(buildXMLRequest(tag), URL_API);
+			System.err.print("Réponse Soap : ");
+			message.writeTo(System.err);
+			System.err.println("");
 		} catch (SOAPException e) {
+			e.printStackTrace();
+		} catch (IOException e) {
 			e.printStackTrace();
 		}
 		if(message != null)
@@ -58,7 +63,6 @@ public class ApiFlickr
 		TreeSet<String> photoSet = new TreeSet<String>();
 		try {
 			ByteArrayOutputStream outSStream = new ByteArrayOutputStream();
-			message.writeTo(System.out);
 			message.writeTo(outSStream);
 			
 			SAXBuilder builder = new SAXBuilder();
@@ -67,7 +71,6 @@ public class ApiFlickr
 			List<Element> nodePhotos = docXML.getRootElement().getChildren().get(0).getChildren().get(0).getChildren().get(0).getChildren();
 			for(Element e : nodePhotos)
 			{
-				System.out.println("http://farm"+e.getAttributeValue("farm")+".staticflickr.com/"+e.getAttributeValue("server")+"/"+e.getAttributeValue("id")+"_"+e.getAttributeValue("secret")+".jpg");
 				photoSet.add("http://farm"+e.getAttributeValue("farm")+".staticflickr.com/"+e.getAttributeValue("server")+"/"+e.getAttributeValue("id")+"_"+e.getAttributeValue("secret")+".jpg");
 			}
 			
@@ -92,15 +95,15 @@ public class ApiFlickr
 				"			<method>flickr.photos.search</method>"+
 				"			<api_key>"+API_KEY+"</api_key>"+
 				"			<secret>"+API_SECRET+"</secret>"+
-				"			<tag>"+pays+"</tag>"+
-				"			<privacy_filter>1</privacy_filter>"+
-				"			<geo_context>2</geo_context>"+
-				"			<content_type>6</content_type>"+
-				"			<per_page>10</per_page>"+
+				"			<tags>"+pays+"</tags>"+
+				"			<tag_mode>all</tag_mode>"+
+				"			<per_page>5</per_page>"+
 				"			<format>soap2</format>"+
 				"		</x:FlickrRequest>"+
 				"	</s:Body>"+
 				"</s:Envelope>";
+		
+		System.err.println("Message Soap envoyé : "+ xml);
 		
 		MessageFactory factory;
 		SOAPMessage message = null;
@@ -118,6 +121,6 @@ public class ApiFlickr
 	public static void main (String args[])
 	{
 		ApiFlickr test = new ApiFlickr();
-		System.out.println(test.getPhotosPays("Paris"));
+		System.out.println(test.getPhotosWithTag("Paris"));
 	}
 }
