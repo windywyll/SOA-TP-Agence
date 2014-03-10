@@ -2,11 +2,15 @@ Compte rendu :
 1 Données
 	- La structure de données de la BDD
 	- Les format messages qui transitent
-	- App Egine
+	- App Engine
 2 Les services
 	- descriptions
 	-problèmes rencontrés
 		SOAP : Ne peut pas renvoyer d'interface
-		SOAP : flickr renvoyais un body null Enull au lieu d'une erreur, dur Edébugger
+		FLICKR renvoyais un body null null au lieu d'une erreur, dur à débugger : DOM : fastidieux, JDOM Plus facile à utiliser
+		FLICKR renvoie n'importe quoi en images
+		FLICKR tag au lieu de tags mais renvoyais quand même des photo quand le geocontext étais définit
+		Google App engine : "There was a problem generating the API metadata for your cloud endpoints classes : unknown protocol: d"
+		Google App : à la fois service rest et app engine
 
 schema, montrer ou on a mis nos trucs.
