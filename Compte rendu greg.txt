@@ -1,5 +1,0 @@
-Concluion :
-
-Pour conclure à propos du projet, Nous avons ateint plus de la moitié de l'objectif du projet, deux parties yant été complétées et deux autres parties étant en cours.
-Nous aurions pu peut être avancer plus vite si nous n'avions pas perdu de temps sur certains point comme essayer de récupérer de bonnes photos sur flickr.
-De plus, maintenant que nous sommes au courant de certains problème comme préferer l'utilisation de JDOM, et qu'une requête SOAP ne renvoie pas forcément d'erreur quand on envoie un mauvais argument, nous seront probablement plus attentif à ce genre d'erreur qui fait perdre du temps alors qu'elle sont simples à corriger.
